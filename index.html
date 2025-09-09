@@ -3,36 +3,143 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Geda Transport</title>
+  <title>Geda Transport — Ontario-wide freight</title>
+  <meta name="description" content="Toronto-based trucking. Reliable LTL and dedicated runs across Ontario." />
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#0b1b2a; color:#fff; }
-    header { display:flex; align-items:center; gap:12px; padding:16px; background:#0e2236; }
-    header img { height:44px; width:auto; border-radius:6px; }
-    .wrap { max-width:960px; margin:0 auto; padding:20px; }
-    .box { background:#102b46; border:2px solid #4aa3ff; border-radius:12px; padding:20px; margin-top:16px; }
+    :root{
+      --bg:#0b1b2a;--panel:#102b46;--ink:#eaf2f9;--sub:#b9c6d2;--accent:#59acff;--head:#0e2236
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,Arial,sans-serif}
+    a{color:inherit}
+    .wrap{max-width:1000px;margin:0 auto;padding:24px 20px}
+
+    /* Header / nav */
+    header{position:sticky;top:0;z-index:10;background:var(--head);box-shadow:0 2px 0 rgba(255,255,255,.04)}
+    .nav{display:flex;align-items:center;gap:14px;padding:12px 20px}
+    .nav img{height:40px;width:auto;border-radius:8px}
+    .nav h1{margin:0;font-size:22px;white-space:nowrap}
+    .navlinks{display:flex;gap:8px;margin-left:auto}
+    .navlinks a{padding:8px 10px;border-radius:8px;text-decoration:none}
+    .navlinks a:hover,.navlinks a[aria-current="page"]{background:rgba(255,255,255,.08)}
+
+    /* Hero / sections */
+    .hero{background:var(--panel);border:2px solid var(--accent);border-radius:16px;padding:28px 22px;margin-top:18px}
+    .grid{display:grid;gap:16px;margin-top:18px}
+    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
+    .card{background:var(--panel);border:2px solid var(--accent);border-radius:14px;padding:20px}
+    .btn{display:inline-block;padding:12px 18px;background:#fff;color:#0b1b2a;text-decoration:none;border-radius:10px;font-weight:700}
+    .small{color:var(--sub);font-size:14px}
+    .addr{white-space:pre-line}
+
+    /* Footer */
+    footer{color:var(--sub);padding:24px 20px}
   </style>
+
+  <!-- Basic SEO / structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Geda Transport",
+    "image":"https://gedatransport.ca/logo.png",
+    "address":{"@type":"PostalAddress","addressLocality":"Toronto","addressRegion":"ON","addressCountry":"CA"},
+    "telephone":"+1-000-000-0000",
+    "email":"info@gedatransport.ca",
+    "url":"https://gedatransport.ca",
+    "areaServed":"Ontario"
+  }
+  </script>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Geda Transport logo" onerror="this.style.display='none'">
-    <h1>Geda Transport</h1>
+    <div class="nav wrap">
+      <img src="logo.png" alt="Geda Transport logo" onerror="this.style.display='none'">
+      <h1>Geda Transport</h1>
+      <nav class="navlinks">
+        <a href="#home" aria-current="page">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="wrap">
-    <section class="box">
+  <main id="home" class="wrap">
+    <section class="hero">
       <h2>Ontario-wide freight. Toronto based.</h2>
-      <p>This is a visibility test. If you can read this, the page is rendering correctly.</p>
-      <p><strong>Phone:</strong> 000-000-0000 • <strong>Email:</strong> info@gedatransport.ca</p>
+      <p>Reliable LTL and dedicated runs across Ontario. Small business care with on-time delivery and direct communication.</p>
+      <p><strong>Core lanes:</strong> GTA ⇄ Ottawa • GTA ⇄ London • GTA ⇄ Windsor • GTA ⇄ Kingston</p>
+      <a class="btn" href="#contact">Get a quote</a>
     </section>
 
-    <section class="box">
-      <h3>Services</h3>
-      <ul>
-        <li>Same-day GTA</li>
-        <li>Next-day Ontario lanes</li>
-        <li>Dock-to-dock and liftgate</li>
-      </ul>
+    <section class="grid">
+      <div class="card">
+        <h3>Services</h3>
+        <ul>
+          <li>Same-day GTA</li>
+          <li>Next-day Ontario lanes</li>
+          <li>Dock-to-dock and liftgate</li>
+          <li>Palletized and general freight</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Why Geda</h3>
+        <ul>
+          <li>Owner-operator responsiveness</li>
+          <li>Insured, safety-focused, clean equipment</li>
+          <li>Live updates and photo POD on request</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="hero">
+      <h2>About</h2>
+      <p>Geda Transport is a Toronto-based trucking company serving customers across Ontario. We keep freight moving with punctual pickups, careful handling, and no runaround. You get the reliability of a larger carrier with the attention of a small business.</p>
+      <div class="grid" style="margin-top:6px">
+        <div class="card">
+          <h3>Coverage</h3>
+          <ul>
+            <li>GTA and surrounding regions</li>
+            <li>Ottawa, Kingston, Kitchener-Waterloo</li>
+            <li>London and Windsor corridors</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Equipment</h3>
+          <ul>
+            <li>Box truck with liftgate</li>
+            <li>Pallet jack and e-track</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="hero">
+      <h2>Contact</h2>
+      <p class="addr">
+<strong>Phone:</strong> 000-000-0000
+<strong>Email:</strong> info@gedatransport.ca
+<strong>Address:</strong> Toronto, Ontario, Canada
+      </p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap">
+        <a class="btn" href="tel:+10000000000">Call now</a>
+        <a class="btn" href="mailto:info@gedatransport.ca">Email us</a>
+      </div>
+      <p class="small" style="margin-top:10px">Replace the placeholders above with your real phone, email, and street address when you’re ready.</p>
     </section>
   </main>
+
+  <footer class="wrap small">© <span id="y"></span> Geda Transport</footer>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // simple active-state swap on nav as you click
+    document.querySelectorAll('.navlinks a').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        document.querySelectorAll('.navlinks a').forEach(x=>x.removeAttribute('aria-current'));
+        a.setAttribute('aria-current','page');
+      });
+    });
+  </script>
 </body>
 </html>
