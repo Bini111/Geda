@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Geda Transport | Ontario Trucking & Hotshot</title>
-  <meta name="description" content="Geda Transport — Ontario trucking: LTL/FTL, hotshot, last‑mile. Fast dispatch at (905) 226‑5027.">
+  <meta name="description" content="Geda Transport — Ontario trucking: LTL/FTL, hotshot, last-mile. Fast dispatch at (905) 226-5027.">
   <style>
     :root{
       --bg: #0b1220;
@@ -13,9 +13,6 @@
       --text: #eaf2ff;
       --accent: #4cc9f0;
       --accent-2: #90f;
-      --ok: #4caf50;
-      --warn: #ffb300;
-      --danger: #ef5350;
       --radius: 16px;
       --shadow: 0 8px 30px rgba(0,0,0,.35);
     }
@@ -27,8 +24,7 @@
     header{position:sticky;top:0;background:rgba(11,18,32,.75);backdrop-filter: blur(6px);border-bottom:1px solid #1f2b48;z-index:20}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:700}
-    .brand svg{width:34px;height:34px}
-    .brand span{letter-spacing:.3px}
+    .brand img{height:34px;width:auto;border-radius:6px}
     .cta-row{display:flex;gap:10px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;border:1px solid #25406b;background:#12203a;color:var(--text);box-shadow:var(--shadow);font-weight:600}
     .btn:hover{transform:translateY(-1px)}
@@ -54,8 +50,7 @@
     input, textarea, select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #28406d;background:#0f1a32;color:var(--text)}
     label{font-size:14px;color:#b9c7e6}
     .footer{border-top:1px solid #20375f;padding:20px 0;color:#98a9cc}
-    .map{height:100%;min-height:260px;border-radius:var(--radius);border:1px solid #223965;background:#0e172c;display:grid;place-items:center;color:#a9bcdf}
-
+    .map{min-height:260px;border-radius:var(--radius);border:1px solid #223965;background:#0e172c;display:grid;place-items:center;color:#a9bcdf}
     @media (max-width:900px){
       .hero-grid, .grid.two, .contact{grid-template-columns:1fr}
     }
@@ -65,13 +60,20 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Geda Transport",
-    "image": "",
     "url": "https://gedatransport.ca",
     "telephone": "+1-905-226-5027",
-    "address": {"@type": "PostalAddress", "streetAddress": "1167 Queen St E", "addressLocality": "Toronto", "addressRegion": "ON", "postalCode": "M4M 1L5", "addressCountry": "CA"},
+    "image": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1167 Queen St E",
+      "addressLocality": "Toronto",
+      "addressRegion": "ON",
+      "postalCode": "M4M 1L5",
+      "addressCountry": "CA"
+    },
     "areaServed": "Ontario",
     "priceRange": "$$",
-    "description": "Ontario-wide trucking, LTL/FTL, hotshot, last‑mile delivery."
+    "description": "Ontario-wide trucking, LTL/FTL, hotshot, last-mile delivery."
   }
   </script>
 </head>
@@ -79,161 +81,9 @@
   <header>
     <div class="container nav">
       <div class="brand" aria-label="Geda Transport">
-        <img src="logo.png" alt="Geda Transport logo" style="height:34px;width:auto;border-radius:6px" />
+        <!-- Upload logo.png to repo root -->
+        <img src="logo.png" alt="Geda Transport logo" />
         <span>Geda Transport</span>
       </div>
       <div class="cta-row">
-        <a class="btn" href="tel:+19052265027">Call: (905) 226‑5027</a>
-        <a class="btn primary" href="#quote">Get a Quote</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="card">
-          <h1>Ontario‑wide trucking, on time. Every time.</h1>
-          <p class="lead">LTL and FTL freight, hotshot, and last‑mile delivery. Real‑time updates and professional drivers who actually answer the phone.</p>
-          <div class="badges">
-            <span class="badge">Fully insured</span>
-            <span class="badge">WSIB compliant</span>
-            <span class="badge">Same‑day options</span>
-          </div>
-          <div class="cta-row" style="margin-top:8px">
-            <a class="btn primary" href="#quote">Request a Quote</a>
-            <a class="btn" href="#services">Our Services</a>
-          </div>
-          <div class="stats">
-            <div class="stat"><div style="font-size:22px;font-weight:800">99.2%</div><div style="color:#9fb1d6">On‑time rate</div></div>
-            <div class="stat"><div style="font-size:22px;font-weight:800">Ontario</div><div style="color:#9fb1d6">Coverage</div></div>
-            <div class="stat"><div style="font-size:22px;font-weight:800">24/7</div><div style="color:#9fb1d6">Dispatch</div></div>
-          </div>
-        </div>
-        <div class="card" aria-label="Hero image">
-          <img src="https://images.unsplash.com/photo-1501700493788-fa1a6e01f8e9?q=80&w=1400&auto=format&fit=crop" alt="Highway semi truck at sunset" />
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <div class="container">
-        <h2>Services</h2>
-        <div class="grid">
-          <div class="card service">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 13h18v5a2 2 0 0 1-2 2h-1a3 3 0 1 1-6 0H9a3 3 0 1 1-6 0H3a2 2 0 0 1-2-2v-5h2Zm0-2v-1a2 2 0 0 1 2-2h7v3H3Zm11-3h4l3 3v2h-7V8Z"/></svg>
-            <div>
-              <h3 style="margin:0 0 6px">LTL / FTL Freight</h3>
-              <p style="margin:0;color:#c8d6f2">From single pallets to full trailer loads. Flexible schedules and live ETAs.</p>
-            </div>
-          </div>
-          <div class="card service">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v3H3V7Zm0 6h20v4a2 2 0 0 1-2 2h-1a3 3 0 1 1-6 0H9a3 3 0 1 1-6 0H5a2 2 0 0 1-2-2v-4Z"/></svg>
-            <div>
-              <h3 style="margin:0 0 6px">Hotshot & Same‑Day</h3>
-              <p style="margin:0;color:#c8d6f2">Time‑critical deliveries across the GTA and Ontario. We move when others can’t.</p>
-            </div>
-          </div>
-          <div class="card service">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 8a2 2 0 0 1 2-2h8l2 2h6a2 2 0 0 1 2 2v3H2V8Zm0 6h22v3a2 2 0 0 1-2 2h-1a3 3 0 1 1-6 0H9a3 3 0 1 1-6 0H4a2 2 0 0 1-2-2v-3Z"/></svg>
-            <div>
-              <h3 style="margin:0 0 6px">Last‑Mile Delivery</h3>
-              <p style="margin:0;color:#c8d6f2">White‑glove or dock‑to‑dock. Appointment handling and POD on completion.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid two">
-        <div class="card">
-          <h2>Industries & Freight</h2>
-          <ul class="list">
-            <li class="pill">Retail & e‑commerce</li>
-            <li class="pill">Construction materials</li>
-            <li class="pill">Food & beverage (non‑perishable)</li>
-            <li class="pill">Manufacturing parts</li>
-            <li class="pill">Events & trade shows</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h2>Why Geda</h2>
-          <ul class="list">
-            <li>Transparent pricing and simple invoices</li>
-            <li>GPS‑tracked vehicles and reliable ETAs</li>
-            <li>Professional, uniformed drivers</li>
-            <li>Real humans on dispatch, 24/7</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="quote" class="section">
-      <div class="container contact">
-        <form class="card" action="mailto:bookings@gedatransport.ca" method="post" enctype="text/plain">
-          <h2>Request a Quote</h2>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="Name" required />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" type="email" name="Email" required />
-            </div>
-            <div>
-              <label for="phone">Phone</label>
-              <input id="phone" name="Phone" />
-            </div>
-            <div>
-              <label for="service">Service</label>
-              <select id="service" name="Service">
-                <option>LTL</option>
-                <option>FTL</option>
-                <option>Hotshot</option>
-                <option>Last‑mile</option>
-              </select>
-            </div>
-            <div>
-              <label for="pickup">Pickup address</label>
-              <input id="pickup" name="Pickup" />
-            </div>
-            <div>
-              <label for="dropoff">Drop‑off address</label>
-              <input id="dropoff" name="Dropoff" />
-            </div>
-          </div>
-          <div style="margin-top:12px">
-            <label for="details">Freight details</label>
-            <textarea id="details" name="Details" rows="4" placeholder="Pallet count, weight, dimensions, times, special handling…"></textarea>
-          </div>
-          <div class="cta-row" style="margin-top:12px">
-            <button class="btn primary" type="submit">Send Request</button>
-            <a class="btn" href="mailto:bookings@gedatransport.ca">Email Dispatch</a>
-          </div>
-        </form>
-        <div class="card map">
-          <div>
-            <h2 style="margin-top:0">Coverage</h2>
-            <p style="margin:0 0 10px;color:#c8d6f2">Ontario-wide service with a GTA hub. Regular runs: Ottawa, London, Windsor, Barrie, Kingston, Niagara.</p>
-            <p style="margin:0;color:#c8d6f2"><strong>Address:</strong> 1167 Queen St E, Toronto, ON M4M 1L5</p>
-            <p style="margin:0;color:#c8d6f2">Dispatch: <a href="tel:+19052265027">(905) 226‑5027</a> • <a href="mailto:dispatch@gedatransport.ca">dispatch@gedatransport.ca</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div>© <span id="y"></span> Geda Transport. All rights reserved.</div>
-      <div><a href="#">Safety</a> · <a href="#">Insurance</a> · <a href="#">Privacy</a></div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+        <a class=
